@@ -1,7 +1,17 @@
 import { Link } from "react-router-dom";
 import logo from '../../../assets/logo.jpg';
+import { useContext } from "react";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Header = () => {
+  const {user, logOut} = useContext(AuthContext);
+  const handleLogOut=()=>{
+    logOut()
+    .then(()=>{})
+    .catch(error=>{
+      console.log(error);
+    })
+  }
   return (
     <div className="drop-shadow-lg">
       <div className="navbar bg-base-100">
@@ -36,7 +46,13 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-         <Link to ="/login"><button className="btn btn-outline btn-primary">Login</button></Link>
+         {
+          user?.email ? <>
+        <Link className="mr-10" to="/add">Add Toy</Link>
+        <Link className="mr-10" to="/mytoy">My Toy</Link>
+                   <button onClick={handleLogOut} >Logout</button>
+          </>   : <Link to ="/login"><button className="btn btn-outline btn-primary">Login</button></Link>
+         }
         </div>
       </div>
     </div>

@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 
 const Category = () => {
-  const [activeTabIndex, setActiveTabIndex] = useState(0);
+  
   const [tabIndex, setTabIndex] = useState(0);
-  const handleTabChange = (index) => {
-    setActiveTabIndex(index);
-  }
+ 
 
   return (
     <div className='my-10 text-center ' >
@@ -30,7 +29,9 @@ const Category = () => {
               <p>Rating:4.5</p>
              
               <div className="card-actions justify-end">
+              <Link to="/details">
                 <button className="btn btn-primary">View Details</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -42,7 +43,9 @@ const Category = () => {
               <p>Price: $1400</p>
               <p>Rating:4.5</p>
               <div className="card-actions justify-end">
+              <Link to="/details">
                 <button className="btn btn-primary">View Details</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -58,7 +61,9 @@ const Category = () => {
               <p>Price: $1800</p>
               <p>Rating:4.5</p>
               <div className="card-actions justify-end">
+              <Link to="/details">
                 <button className="btn btn-primary">View Details</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -70,7 +75,9 @@ const Category = () => {
               <p>Price: $1400</p>
               <p>Rating:4.7</p>
               <div className="card-actions justify-end">
+              <Link to="/details">
                 <button className="btn btn-primary">View Details</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -88,7 +95,9 @@ const Category = () => {
               <p>Price: $1400</p>
               <p>Rating:4.9</p>
               <div className="card-actions justify-end">
+              <Link to="/details">
                 <button className="btn btn-primary">View Details</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -100,7 +109,9 @@ const Category = () => {
               <p>Price: $1400</p>
               <p>Rating:4.5</p>
               <div className="card-actions justify-end">
+                <Link to="/details">
                 <button className="btn btn-primary">View Details</button>
+                </Link>
               </div>
             </div>
           </div>
