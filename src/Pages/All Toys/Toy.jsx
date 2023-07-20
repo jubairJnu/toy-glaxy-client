@@ -1,29 +1,31 @@
 import { Link } from "react-router-dom";
 
 
-const Toy = ({toy}) => {
-  const {_id, name,seller,price,available,category } = toy;
+const Toy = ({ toy }) => {
+  const { _id, name, seller, price, available, category } = toy;
   return (
     <tr>
-       <td> {seller}</td>
-        <td>
-         {name}
-          </td>
-        <td>
-         {category}
-          </td>
-        <td>
+      <td> {seller}</td>
+      <td>
+        {name}
+      </td>
+      <td>
+        {category}
+      </td>
+      <td>
         {price}
-          </td>
-        <td>
+      </td>
+      <td>
         {available}
-          </td>
-        <td>
-        <Link to="/details">
-                <button className="btn btn-xs">View Details</button>
-                </Link>
-          </td>
-      </tr>
+      </td>
+      <td>
+        
+          <Link to={`/details/${_id}`}>
+            <button className="btn btn-xs">View Details</button>
+          </Link>
+                 
+      </td>
+    </tr>
   );
 };
 

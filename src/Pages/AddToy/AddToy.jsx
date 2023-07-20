@@ -12,12 +12,13 @@ const AddToy = () => {
     const category = form.category.value;
     const rating = form.rating.value;
     const name = form.name.value;
+    const description = form.description.value;
     const newCar={
-      photo,name,email,seller,price,available,category,rating
+      photo,name,email,seller,price,available,category,rating,description
     };
     console.log(newCar);
     // ****
-    fetch('http://localhost:5000/add',{
+    fetch('https://toy-glaxy-server.vercel.app/add',{
       method:'POST',
       headers:{
         'content-type': 'application/json'

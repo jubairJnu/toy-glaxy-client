@@ -30,7 +30,7 @@ const Category = () => {
              
               <div className="card-actions justify-end">
               <Link to="/details">
-                <button className="btn btn-primary">View Details</button>
+                <Link to="/details"><button className="btn btn-primary">View Details</button></Link>
                 </Link>
               </div>
             </div>

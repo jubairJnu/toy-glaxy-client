@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
 import Toy from "./Toy";
 
 
@@ -7,10 +6,10 @@ const Toys = () => {
  const [toys, setToys] = useState([]);
 
  useEffect(()=>{
-  fetch(' http://localhost:5000/add')
+  fetch('https://toy-glaxy-server.vercel.app/add')
   .then(res => res.json())
   .then(data=>{
-    console.log(data);
+  
     setToys(data);
   })
  },[])

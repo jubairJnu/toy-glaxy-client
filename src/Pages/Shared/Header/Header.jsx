@@ -46,13 +46,21 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-         {
-          user?.email ? <>
-        <Link className="mr-10" to="/add">Add Toy</Link>
-        <Link className="mr-10" to="/mytoy">My Toy</Link>
-                   <button onClick={handleLogOut} >Logout</button>
-          </>   : <Link to ="/login"><button className="btn btn-outline btn-primary">Login</button></Link>
-         }
+        {user?.email ? (
+            <>
+              <Link className="mr-10" to="/add">
+                Add Toy
+              </Link>
+              <Link className="mr-10" to="/mytoy">
+                My Toy
+              </Link>
+              <button onClick={handleLogOut}>Logout</button>
+            </>
+          ) : (
+            <Link to="/login">
+              <button className="btn btn-outline btn-primary">Login</button>
+            </Link>
+          )}
         </div>
       </div>
     </div>
