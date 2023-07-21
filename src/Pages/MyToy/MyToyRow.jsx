@@ -22,10 +22,11 @@ const MyToyRow = ({mytoy, handleDelete}) => {
       <td>
         
         <div className="flex items-center">
-        <Link className="text-orange-500" to={`/details/${_id}`}>
+        <Link className="text-green-500 btn btn-circle btn-outline" 
+        to={`/update/${_id}`}>
             <FaPencilAlt/>
           </Link>
-          <button onClick={()=>handleDelete(_id)} className="ml-4 text-red-500" ><FaTrashAlt/> </button>
+          <button onClick={()=>handleDelete(_id)} className="ml-4 text-red-500 btn btn-circle btn-outline" ><FaTrashAlt/> </button>
         </div>
                  
       </td>
