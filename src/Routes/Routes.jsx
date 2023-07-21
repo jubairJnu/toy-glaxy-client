@@ -11,6 +11,7 @@ import MyToy from "../Pages/MyToy/MyToy";
 import PrivateRoutes from "../Provider/PrivateRoutes";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import Update from "../Pages/Update/Update";
+import Blogs from "../Pages/Blogs/Blogs";
 
 const router = createBrowserRouter([
   {
@@ -52,7 +53,13 @@ const router = createBrowserRouter([
       path:'update/:id',
       element:<Update></Update>,
       loader:({params})=> fetch(`http://https://toy-glaxy-server.vercel.app/mytoys/${params.id}`)
-    }
+    },
+{
+  path:'blog',
+  element:<Blogs></Blogs>,
+  loader:()=>fetch('https://toy-glaxy-server.vercel.app/blogs')
+}
+
     ]
   },
 ]);
