@@ -17,7 +17,7 @@ const Update = () => {
     };
     console.log(updatedToy);
     // ****
-    fetch(`http://localhost:5000/mytoys/${_id}`, {
+    fetch(`http://https://toy-glaxy-server.vercel.app/mytoys/${_id}`, {
       method: 'PATCH',
       headers: {
         'content-type': 'application/json'

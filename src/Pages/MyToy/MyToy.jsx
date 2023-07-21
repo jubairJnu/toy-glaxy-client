@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 const MyToy = () => {
   const [myToys, setMyToys] = useState([]);
   const { user } = useContext(AuthContext);
-  const url = `http://localhost:5000/mytoys?email=${user?.email}`
+  const url = `https://toy-glaxy-server.vercel.app/mytoys?email=${user?.email}`
 
   useEffect(() => {
     fetch(url)
@@ -30,7 +30,7 @@ const MyToy = () => {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/mytoys/${id}`, {
+        fetch(`http://https://toy-glaxy-server.vercel.app/mytoys/${id}`, {
           method: 'DELETE'
         })
           .then(res => res.json())

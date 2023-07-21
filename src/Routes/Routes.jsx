@@ -46,12 +46,12 @@ const router = createBrowserRouter([
     {
       path:'details/:id',
       element:<PrivateRoutes><ViewDetails></ViewDetails> </PrivateRoutes>,
-      loader:({params})=> fetch(`http://localhost:5000/add/${params.id}`)
+      loader:({params})=> fetch(`http://https://toy-glaxy-server.vercel.app/add/${params.id}`)
     },
     {
       path:'update/:id',
       element:<Update></Update>,
-      loader:({params})=> fetch(`http://localhost:5000/mytoys/${params.id}`)
+      loader:({params})=> fetch(`http://https://toy-glaxy-server.vercel.app/mytoys/${params.id}`)
     }
     ]
   },
